@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: a-deployment
+  name: a-micro
   namespace: dev
   labels:
     app: myapp
-    svc: a
+    svc: a-micro
 spec:
-  replicas: 6
+  replicas: 2
   selector:
     matchLabels:
-      svc: a
+      svc: a-micro
   template:
     metadata:
       labels:
-        svc: a
+        svc: a-micro
         app: myapp
     spec:
       topologySpreadConstraints:
@@ -23,13 +23,13 @@ spec:
         whenUnsatisfiable: DoNotSchedule
         labelSelector:
           matchLabels:
-            svc: a
+            svc: a-micro
       - maxSkew: 1
         topologyKey: kubernetes.io/hostname
         whenUnsatisfiable: DoNotSchedule
         labelSelector:
           matchLabels:
-            svc: a
+            svc: a-micro
       affinity:
         podAffinity:
           preferredDuringSchedulingIgnoredDuringExecution:
