@@ -9,9 +9,9 @@ provider "kubernetes" {
 }
 
 # Create a namespace to host containers
-resource "kubernetes_namespace" "podswithconstrains" {
+resource "kubernetes_namespace" "dev" {
   metadata {
-    name = "podswithconstrains"
+    name = "dev"
   }
 }
 

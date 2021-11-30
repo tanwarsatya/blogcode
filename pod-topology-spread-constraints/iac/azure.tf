@@ -8,10 +8,11 @@ resource "azurerm_kubernetes_cluster" "aksmultizone" {
   location            = azurerm_resource_group.podconstraints.location
   resource_group_name = azurerm_resource_group.podconstraints.name
   dns_prefix          = "aksmultizone"
+  kubernetes_version  = "1.21.2"
 
   default_node_pool {
     name       = "default"
-    node_count = 3
+    node_count = 9
     vm_size    = "Standard_B2s"
     availability_zones = ["1", "2", "3"] 
   }
