@@ -12,7 +12,7 @@ resource "azurerm_kubernetes_cluster" "aksmultizone" {
 
   default_node_pool {
     name       = "default"
-    node_count = 9
+    node_count = 6
     vm_size    = "Standard_B2s"
     availability_zones = ["1", "2", "3"] 
   }
