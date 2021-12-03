@@ -3,7 +3,7 @@
 - AZ CLI
 - kubectl
 
-## Purpose and Struture
+## Purpose and Structure
 
 This example is for showcasing the usage of pod affinity and pod topology spread constraint to deploy resilient and efficient microservices in a Kubernetes cluster where node pool is spread across multiple zones
 
@@ -30,8 +30,12 @@ This directory contains bash files for executing the following scenarios
 ## Steps to Run
 
 - install the prerequisites listed above
-- clone the examples repo to your machine
-- once cloned to a local directory change to that directory
+- clone only the folder 'pod-topology-spread-constraints' from examples repo to your machine with following steps
+  - git clone --no-checkout https://github.com/tanwarsatya/examples.git
+  - cd examples
+  - git sparse-checkout init --cone
+  - git sparse-checkout set pod-topology-spread-constraints
+  
 - change directory to pod-topology-spread-constraints folder
 - perform ***'az login'*** from the command prompt
 - select the subscription with ***'az account set --subscription "XXXX-XXXXX-XXXX"'*** to deploy the AKS cluster
