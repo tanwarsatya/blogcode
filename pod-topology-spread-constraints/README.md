@@ -9,7 +9,7 @@ This example is for showcasing the usage of pod affinity and pod topology spread
 
 ### iac
 
-This directory contains Terrform files to provision an Azure Kubernetes Cluster in one region of Azure. The cluster will have  a single node pool of 6 nodes spread across 3 zones. The VM type used is 'Standard_B2s' to keep the cost minimum.
+This directory contains Terraform files to provision an Azure Kubernetes Cluster in one region of Azure. The cluster will have a single node pool of 6 nodes spread across 3 zones. The VM type used is 'Standard_B2s' to keep the cost minimum.
 
 ### myapp
 
