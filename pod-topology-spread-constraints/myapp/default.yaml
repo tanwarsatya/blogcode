@@ -7,7 +7,7 @@ metadata:
     app: myapp
     svc: a-micro
 spec:
-  replicas: 4
+  replicas: 1
   selector:
     matchLabels:
       svc: a-micro
@@ -34,7 +34,7 @@ metadata:
     app: myapp
     svc: b-micro
 spec:
-  replicas: 4
+  replicas: 1
   selector:
     matchLabels:
       svc: b-micro
@@ -61,7 +61,7 @@ metadata:
     app: myapp
     svc: c-micro
 spec:
-  replicas: 4
+  replicas: 1
   selector:
     matchLabels:
       svc: c-micro
