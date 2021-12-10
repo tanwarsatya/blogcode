@@ -15,6 +15,7 @@ resource "azurerm_kubernetes_cluster" "aksmultizone" {
     node_count = 6
     vm_size    = "Standard_B2s"
     availability_zones = ["1", "2", "3"] 
+   
   }
 
   identity {
